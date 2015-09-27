@@ -33,6 +33,7 @@ activity_labels <- as.character(activity_labels)
 features <- read.table("UCI HAR Dataset/features.txt")[,2]
 
 # select only measurements on means and standard deviations from the features list
+# using regular expressions
 selected_features <- grepl("mean\\(|std\\(", features)
 
 # match data with measurement names
